@@ -1,0 +1,27 @@
+{
+  "name": "test-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx dotenv -e .env.development -- tsx watch src/index.ts",
+    "start": "node ./dist/index.js",
+    "up-build": "docker-compose up --build -d",
+    "down": "docker-compose down"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@apollo/server": "^4.9.5",
+    "@graphql-tools/schema": "^10.0.2",
+    "@neo4j/graphql": "^5.3.4",
+    "graphql": "^16.8.1",
+    "neo4j-driver": "^5.15.0"
+  },
+  "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.20.1",
+    "@types/node": "^20.10.1",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "dotenv-cli": "^7.3.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.2"
+  }
+}
